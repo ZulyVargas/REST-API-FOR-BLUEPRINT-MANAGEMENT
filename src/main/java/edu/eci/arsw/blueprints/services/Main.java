@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
 
-    public static void main(String a[]) throws BlueprintPersistenceException, BlueprintNotFoundException {
+    public static void main_t(String a[]) throws BlueprintPersistenceException, BlueprintNotFoundException {
 
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         BlueprintsServices bps = ac.getBean(BlueprintsServices.class);

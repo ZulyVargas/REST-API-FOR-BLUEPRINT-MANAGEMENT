@@ -1,8 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+* To change this license header, choose License Headers in Project Properties.
+* To change this template file, choose Tools | Templates
+* and open the template in the editor.
+*/
 package edu.eci.arsw.blueprints.controllers;
 
 import java.util.LinkedHashSet;
@@ -22,27 +22,26 @@ import org.springframework.web.bind.annotation.RestController;
 import static java.util.logging.Level.*;
 
 /**
- *
- * @author hcadavid
- */
+*
+* @author hcadavid
+*/
 //@Service
-    /**
 @RestController
 @RequestMapping(value = "/blueprints")
 public class BlueprintAPIController {
 
-    @Autowired
-    BlueprintsServices bps;
+ @Autowired
+ BlueprintsServices bps;
 
-    @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<?> manejadorGetRecursoXX(){
-        try {
-            //obtener datos que se enviarán a través del API
-            return new ResponseEntity<>(bps.getAllBlueprints(), HttpStatus.ACCEPTED);
-        } catch (Exception ex) {
-            Logger.getLogger(BlueprintAPIController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>("Error bla bla bla",HttpStatus.NOT_FOUND);
-        }
-    }
-    
-}**/
+ @RequestMapping(method = RequestMethod.GET)
+ public ResponseEntity<?> manejadorGetRecursoXX(){
+  try {
+  //obtener datos que se enviarán a través del API
+   return new ResponseEntity<>(bps.getAllBlueprints(), HttpStatus.ACCEPTED);
+  } catch (Exception ex) {
+   Logger.getLogger(BlueprintAPIController.class.getName()).log(Level.SEVERE, null, ex);
+  return new ResponseEntity<>("Error bla bla bla",HttpStatus.NOT_FOUND);
+  }
+ }
+
+}
