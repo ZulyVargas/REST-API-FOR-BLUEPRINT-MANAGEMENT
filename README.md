@@ -2,7 +2,7 @@
 
 ### Arquitecturas de Software
 
-
+### José Gamboa - Zuly Vargas Ramírez
 
 #### API REST para la gestión de planos.
 
