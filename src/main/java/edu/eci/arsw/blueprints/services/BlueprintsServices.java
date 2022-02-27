@@ -31,7 +31,7 @@ public class BlueprintsServices {
         bpp.saveBlueprint(bp);
     }
     
-    public Set<Blueprint> getAllBlueprints(){
+    public Set<Blueprint> getAllBlueprints() throws BlueprintPersistenceException{
         //Filter before return
         return bpf.filterBlueprints(bpp.getAllBlueprints());
     }

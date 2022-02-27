@@ -136,14 +136,14 @@ Del anterior diagrama de componentes (de alto nivel), se desprendió el siguient
 
 
 
-3. Teniendo en cuenta el autor y numbre del plano registrado, verifique que el mismo se pueda obtener mediante una petición GET al recurso '/blueprints/{author}/{bpname}' correspondiente.
+3. Teniendo en cuenta el autor y nombre del plano registrado, verifique que el mismo se pueda obtener mediante una petición GET al recurso '/blueprints/{author}/{bpname}' correspondiente.
 
    1. Agregue soporte al verbo PUT para los recursos de la forma '/blueprints/{author}/{bpname}', de manera que sea posible actualizar un plano determinado.
 
 
 ### Parte III
 
-El componente BlueprintsRESTAPI funcionará en un entorno concurrente. Es decir, atederá múltiples peticiones simultáneamente (con el stack de aplicaciones usado, dichas peticiones se atenderán por defecto a través múltiples de hilos). Dado lo anterior, debe hacer una revisión de su API (una vez funcione), e identificar:
+El componente BlueprintsRESTAPI funcionará en un entorno concurrente. Es decir, atenderá múltiples peticiones simultáneamente (con el stack de aplicaciones usado, dichas peticiones se atenderán por defecto a través de múltiples hilos). Dado lo anterior, debe hacer una revisión de su API (una vez funcione), e identificar:
 
 * Qué condiciones de carrera se podrían presentar?
   * Cuales son las respectivas regiones críticas?

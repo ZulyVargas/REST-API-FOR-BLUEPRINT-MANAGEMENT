@@ -16,6 +16,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  *
@@ -24,7 +25,7 @@ import java.util.Set;
 @Component
 public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
 
-    private final Map<Tuple<String,String>,Blueprint> blueprints=new HashMap<>();
+    private final Map<Tuple<String,String>,Blueprint> blueprints=new ConcurrentHashMap<>();
 
     public InMemoryBlueprintPersistence() {
 
@@ -78,12 +79,11 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence{
     }
 
     @Override
-    public Set<Blueprint> getAllBlueprints(){
+    public Set<Blueprint> getAllBlueprints() throws BlueprintPersistenceException{
         Set<Blueprint> res = new HashSet<Blueprint>();
         for (Tuple<String,String> key : blueprints.keySet()){
             res.add(blueprints.get(key));
         }
         return res;
     }
-    
 }
