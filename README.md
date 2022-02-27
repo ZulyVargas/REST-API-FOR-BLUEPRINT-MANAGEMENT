@@ -84,6 +84,11 @@ Del anterior diagrama de componentes (de alto nivel), se desprendió el siguient
    **Consulta de planos del autor "valentina":**
 
    ![](img/autorPlano.png)
+   
+   **Consulta de un autor que no existe(camilo):**
+
+   ![](img/404.png)
+
 
 ### Parte II
 
@@ -101,8 +106,11 @@ Del anterior diagrama de componentes (de alto nivel), se desprendió el siguient
         }        
  	
     }
-    ```	
+    ```
+   
+   **Método:**
 
+![](img/post.png)
 
 2. Para probar que el recurso ‘planos’ acepta e interpreta
     correctamente las peticiones POST, use el comando curl de Unix. Este
@@ -119,6 +127,13 @@ Del anterior diagrama de componentes (de alto nivel), se desprendió el siguient
 	
 
     Nota: puede basarse en el formato jSON mostrado en el navegador al consultar una orden con el método GET.
+
+![](img/curl.png)
+
+**GET Comprobación:**
+
+![](img/get_dan.png)
+
 
 
 3. Teniendo en cuenta el autor y numbre del plano registrado, verifique que el mismo se pueda obtener mediante una petición GET al recurso '/blueprints/{author}/{bpname}' correspondiente.
