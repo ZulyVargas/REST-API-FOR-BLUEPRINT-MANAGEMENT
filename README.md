@@ -139,6 +139,14 @@ Del anterior diagrama de componentes (de alto nivel), se desprendió el siguient
 3. Teniendo en cuenta el autor y nombre del plano registrado, verifique que el mismo se pueda obtener mediante una petición GET al recurso '/blueprints/{author}/{bpname}' correspondiente.
 
    1. Agregue soporte al verbo PUT para los recursos de la forma '/blueprints/{author}/{bpname}', de manera que sea posible actualizar un plano determinado.
+   
+   **PUT:**
+
+![](img/put_david.png)
+
+**Al consultar con GET se observa el plano actualizado :**
+
+![](img/prueba_david.png)
 
 
 ### Parte III
@@ -151,6 +159,11 @@ El componente BlueprintsRESTAPI funcionará en un entorno concurrente. Es decir,
 Ajuste el código para suprimir las condiciones de carrera. Tengan en cuenta que simplemente sincronizar el acceso a las operaciones de persistencia/consulta DEGRADARÁ SIGNIFICATIVAMENTE el desempeño de API, por lo cual se deben buscar estrategias alternativas.
 
 Escriba su análisis y la solución aplicada en el archivo ANALISIS_CONCURRENCIA.txt
+
+![](img/cond_carrera.png)
+
+![](img/hashmap.png)
+
 
 #### Criterios de evaluación
 
